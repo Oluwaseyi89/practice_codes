@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+       <link rel="stylesheet" href="bootstrap.min.css" />
+       <!-- <script type="text/javascript" src="bootstrap.min.js"></script> -->
+       <script type="text/javascript" src="jquery-3.6.0.js"></script>
+       <title>Bad Request!</title>
+       <style>
+          body {
+             position: relative;
+          }
+          button {
+             margin-left: 30px;
+          }
+          #showText {
+             margin-left: 50px;
+             height: 200px;
+             width: 900px;
+             border: 5px solid red;
+             position: absolute;
+             margin-top: 150px;
+             padding-left: 30px;
+             padding-top: 30px;
+          }
+       </style>
+    </head>
+   
+<!--This section is the document body-->
+   <body>
+          <h1>404 - Page Not Found!</h1>   <br/>
+          <button id="btn1">Load Text</button> <br/>
+
+          <div id="showText"> </div>
+          <script>
+             var txtBtn = document.getElementById('btn1');
+             var txtCon = document.getElementById('showText');
+             
+             txtBtn.addEventListener('click', () => {
+                     // var xhr = new XMLHttpRequest();
+                     
+                     // xhr.open('GET', 'sample.txt', true);
+                     // // xhr.setRequestHeader('Accept', 'text/plain');
+
+                     // xhr.onload = function () {
+                     //    if (this.status == 200) {
+                     //       txtCon.innerHTML += this.responseText + '<br />';
+                     //       // txtCon.innerHTML.append(this.responseText);
+                     //       // console.log(this.responseText);
+                     //    } else {
+                     //       alert('An Error occured!');
+                     //    }
+                     // } 
+                     // xhr.send();
+
+                     // var xhr = new XMLHttpRequest();
+                     // xhr.open('GET', 'sample.json', true);
+                     // xhr.setRequestHeader('Accept', 'application/json');
+
+                     // xhr.onload = function () {
+                     //    if (this.status == 200) {
+                     //       var obj = JSON.parse(this.responseText);
+                     //       txtCon.innerHTML += 'Surname: ' + obj.Surname + '<br/>' +
+                     //                            'First Name: ' + obj.FirstName + '<br/>' +
+                     //                            'E-mail: ' + obj.eMail + '<br/>' + '<br/>';
+                     //       // console.log(JSON.parse(this.responseText));
+                     //    } else {
+                     //       alert('An Error occured!');
+                     //    }
+                     // } 
+                     // xhr.send();
+
+                     const myHeader = new Headers();
+                     const myRequest = new Request('sample.json', {
+                        method: 'GET',
+                        headers: myHeader,
+                        mode: 'cors',
+                        cache: 'default',
+                     });
+
+                     fetch(myRequest).then((res) => res.json()).
+                        then((text) => txtCon.innerHTML += text.Surname + " " + text.FirstName + '<br/>');
+                     // txtCon.innerHTML = response.text();
+                     // console.log(res);
+                });             
+          </script>
+   </body>
+</html>

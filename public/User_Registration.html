@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+       <link rel="stylesheet" href="Dxl_Main_Style.css" />
+       <link rel="stylesheet" href="bootstrap.min.css" />
+       <script type="text/javascript" src="jquery-3.6.0.js"></script>
+       <script type="text/javascript" src="handlebars-v4.7.7.js"></script>
+       <title>User Registration</title>
+    </head>
+   
+<!--This section is the document body-->
+   <body class="myBody">
+          <!--This is the Navbar section-->  
+          <div id=navBar class="navbar">
+            <div class="brand logo">
+                <img id="logo" src="Dxl Tech logo Transparent.png"/>
+            </div>
+                      <div id="headcon">
+                            <div><a href="Dxl_Home_Page.html">Home</a></div>
+                            <div><a href="#">About</a></div>
+                           <div><a href="#">Our Services</a></div>
+                           <div><a href="#">Our Products</a></div>
+                            <div> <a href="User_Registration.html">Subscribe for Voucher</a></div>
+                           <div> <a href="#">Careers</a> </div>
+                           
+                        
+                      </div> 
+                                <div id="iconImg">
+                                            <a href="User_Login.html">
+                                                <img id="uIcon" src="User_Icon.png" />
+                                            </a>
+                                </div>
+        </div>
+        <!--Enter All Fields Alert Box Code Starts Here-->
+        <div id="regAlert" class="alert alert-danger alert-dismissible" role="alert">
+            <span class="close" id="regClose" role="alert" data-dismissible="Alert">&times;</span>
+                <p>Please Enter All Fields!</p>
+        </div>
+
+        <!--Invalid E-Mail Alert Box Code Starts Here-->
+        <div id="invalEm" class="alert alert-danger alert-dismissible" role="alert">
+            <span class="close" id="valEmClose" role="alert" data-dismissible="Alert">&times;</span>
+                <p>Please Enter a Valid E-Mail!</p>
+        </div>
+        <!--Password Mismatch Alert Box Code Starts Here-->
+        <div id="pwMismatch" class="alert alert-danger alert-dismissible" role="alert">
+            <span class="close" id="pwMisClose" role="alert" data-dismissible="Alert">&times;</span>
+                <p>Supplied Passwords Mismatch!</p>
+        </div>
+         <!--E-Mail Validation Alert Box Code Starts Here-->
+         <div id="mailValid" class="alert alert-danger alert-dismissible" role="alert">
+            <span class="close" id="emForClose" role="alert" data-dismissible="Alert">&times;</span>
+                <p>Please Enter a Valid E-Mail Address!</p>
+        </div>
+
+        <div class="row-fluid"  id="myReg">
+            <form method="POST" action="/customers">
+                <fieldset>
+                    <legend>Customer Registration</legend> <br/>
+                    <div id="formSet">
+                        <div>
+                            <input name="LastName" id="surname" type="text" for="surname" placeholder="Surname Here" /><br /><br />
+                            <input name="FirstName" id="firstname" type="text" for="first name" placeholder="First Name Here" /><br /><br />
+                            <input name="eMail" id="emailReg" type="text" for="E-Mail" placeholder="E-Mail here" /><br /><br />
+                            <input name="phone" id="phone" type="text" for="Phone" placeholder="Phone No. 0802000000" /><br /><br />
+                            <input name="country" id="country" type="text" for="country" placeholder="Country" /><br /><br />
+                        </div>
+                        <div>
+                            <input name="state" id="state" type="text" for="state" placeholder="State/Province" /><br /><br />
+                            <input name="street" id="street" type="text" for="street" placeholder="Street Address" /><br /><br />
+                            <input name="dob" id="dob" type="date" for="dob" placeholder="Date of Birth" /><br /><br />
+                            <input name="passWord" id="passwordReg" type="password" for="password" placeholder="Password" /><br /><br />
+                            <input id="passwordReg2" type="password" for="password" placeholder="Confirm Password" /><br /><br />
+                        </div>
+                    </div>
+                   
+                    <button type="submit" class="btn" id="regBtn" method="POST" action="/Online_Users">Register</button> <br/> <br />
+                    <a href="User_Login.html">Login Instead</a>
+                </fieldset>
+            </form>
+        </div>
+         <!--Find the Chat Box Below-->
+         <div id="RegChatBox">
+            <span class='close' id='xChatReg' style="padding-top: 20px; padding-right: 20px;">&times;</span>
+            <p>
+                <h1 style="padding-top: 180px; text-align: center; color: white">This is the Chat Box</h1>
+            </p>
+        </div>
+        <div id='revChatReg'>
+            <p id="shRegCh"><a><b>Show Chat</b></a></p>
+        </div>
+        <div id="footerReg">
+            <footer> This is the Footer </footer>
+            </div>      
+        <!--Chat Box Ends Here-->   
+        <script type="text/javascript" src="Dxl_Main_Script.js"></script> 
+        <script type="text/javascript" src="Dxl_jQuery.js"></script>  
+        <script type="text/javascript" src="bootstrap.min.js"></script>
+       
+               
+   </body>
+</html>

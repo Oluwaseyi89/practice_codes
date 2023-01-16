@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+       <link rel="stylesheet" href="Dxl_Main_Style.css" />
+        <link rel="stylesheet" href="showcaserow.css" />
+       <link rel="stylesheet" href="bootstrap.min.css" />
+       <script type="text/javascript" src="bootstrap.min.js"></script> 
+       <script type="text/javascript" src="jquery-3.6.0.js"></script>
+        <script type="text/javascript" src="handlebars-v4.7.7.js"></script> 
+       <title>Process Page</title>
+    </head>
+    
+    <body class="myBody">
+        
+        <!--This is the Navbar section-->  
+            <div id=navBar class="navbar">
+                <div class="brand logo">
+                    <img id="logo" src="Dxl Tech logo Transparent.png"/>
+                </div>
+                          <div id="headcon">
+                            <div><a href="Dxl_Home_Page.html">Home</a></div>
+                                    <div><a href="#">About</a></div>
+                                   <div><a href="#">Our Services</a></div>
+                                   <div><a href="#">Our Products</a></div>
+                                    <div> <a href="User_Registration.html">Subscribe for Voucher</a></div>
+                                   <div> <a href="#">Careers</a> </div>
+                                   {{!-- <div> <a href="#">Logout</a> </div> --}}
+                          </div> 
+                                    <div id="iconImg">
+                                                <a href="User_Login.html">
+                                                    <img id="uIcon" src="User_Icon.png" />
+                                                </a>
+                                    </div>
+            </div>
+                       <div id="welcome" style="margin-top: 80px; position: sticky; height: 200px; width: 100%; padding-left: 25px;">
+                            {{!-- <p id="welMsg" style="margin-top: 50px; position: relative; text-align: center;"><h1>Welcome User!</h1></p> --}}
+                            {{{body}}}                
+                       </div> 
+            <div id="SocialMedia">
+                <div id="facebook">
+                       <a href="https://www.facebook.com"><img src="./Icons/Facebook_Icon.png" id="fbIcon" /></a> 
+                </div>
+                <div id="Whatsapp">
+                        <a href="#"><img src="./Icons/WhatsApp_Icon.png" id="WaApIcon" /></a>
+                </div>
+                <div id="Instagram">
+                        <a href="#"><img src="./Icons/Instagram_Icon.png" id="InstIcon" /></a>
+                </div>
+                <div id="twitter">
+                        <a href="#"><img src="./Icons/Twitter_Icon.png" id="twitIcon" /></a>
+            </div>
+                <div id="youtube">
+                        <a href="#"><img src="./Icons/YouTube.png" id="yutuIcon" /></a>
+                </div>
+            </div>
+            <div style="margin-top: 2200px;"></div>
+
+            
+             
+             <div id=mainFooter>
+                 <footer> This is the Footer </footer>
+             </div>
+   <script type="text/javascript" src="Dxl_Main_Script.js"></script>
+   <script type="text/javascript" src="Dxl_jQuery.js"></script>
+    <script type="text/javascript" src="prodUpdate.js"></script>
+    </body> 
+</html>
+  

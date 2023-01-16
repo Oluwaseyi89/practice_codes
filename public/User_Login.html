@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+       <link rel="stylesheet" href="Dxl_Main_Style.css" />
+       <link rel="stylesheet" href="bootstrap.min.css" />
+       <script type="text/javascript" src="jquery-3.6.0.js"></script>
+       <script type="text/javascript" src="handlebars-v4.7.7.js"></script>
+    </head>
+   <title>User Login</title>
+   
+   <body class="myBody" id="formBody">
+              <!--This is the Navbar section-->  
+              <div id=navBar class="navbar">
+                <div class="brand logo">
+                    <img id="logo" src="Dxl Tech logo Transparent.png"/>
+                </div>
+                          <div id="headcon">
+                                <div><a href="Dxl_Home_Page.html">Home</a></div>
+                                <div><a href="#">About</a></div>
+                               <div><a href="#">Our Services</a></div>
+                               <div><a href="#">Our Products</a></div>
+                                <div> <a href="User_Registration.html">Subscribe for Voucher</a></div>
+                               <div> <a href="#">Careers</a> </div>
+                               
+                            
+                          </div> 
+                                    <div id="iconImg">
+                                                <a href="User_Login.html">
+                                                    <img id="uIcon" src="User_Icon.png" />
+                                                </a>
+                                    </div>
+            </div>
+            </div>
+            <div id="logAlert" class="alert alert-danger alert-dismissible" role="alert">
+                <span class="close" id="close" role="alert" data-dismissible="Alert">&times;</span>
+                    <p>Please input your E-Mail and Password!</p>
+            </div>
+        <div id="formBox">
+            <div class="row-fluid"  id="myForm">
+                <form action="/login" method="POST">
+                    <fieldset>
+                        <legend>User Login</legend>
+                        <input type="text" id="emailLog" name="email" placeholder="E-Mail here" /><br /><br />
+                        <input type="password" id="passwordLog" name="password" placeholder="Password" /><br /><br />
+                        <button type="submit" method="POST" action="/login" class="btn" id="Login">Login</button> <br/> 
+                        <div id="passReset">
+                            <a href="/reset" action="/reset">Reset Password</a> or <a href="User_Registration.html">Register</a>
+                        </div>
+                    </fieldset>
+                </form>
+            </div> 
+        </div>  
+         <!--Find the Chat Box Below-->
+         <div id="LogChatBox">
+            <span class='close' id='xChLog' style="padding-top: 20px; padding-right: 20px;">&times;</span>
+            <p>
+                <h1 style="padding-top: 180px; text-align: center; color: white">This is the Chat Box</h1>
+            </p>
+        </div>
+        <div id='revChatLog'>
+            <p id="showChat">Show Chat</p>
+        </div>
+        <!--Chat Box Ends Here--> 
+
+        <script type="text/javascript" src="Dxl_jQuery.js"></script> 
+        <script type="text/javascript" src="Dxl_Main_Script.js"></script>  
+        <script type="text/javascript" src="bootstrap.min.js"></script>   
+     <div id="footerLog">
+            <footer> This is the Footer </footer>
+    </div>  
+   </body>
+   </html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+       <link rel="stylesheet" href="bootstrap.min.css" />
+       <!-- <script type="text/javascript" src="bootstrap.min.js"></script> -->
+       <script type="text/javascript" src="jquery-3.6.0.js"></script>
+       <title>Customers</title>
+       <style>
+          #btn {
+             margin-top: 40px;
+             margin-left: 100px;
+          }
+          #btn button:hover {
+             background-color: chartreuse;
+          }
+          #show {
+             height: 500px;
+             border: 5px solid blue;
+             margin-top: 70px;
+          }
+         
+       </style>
+    </head>
+   
+<!--This section is the document body-->
+   <body>
+      <div id="btn">
+         <button>Get Customers</button>
+      </div>
+      <div id="show" class="container">
+
+      </div>
+         <script>
+            const show = document.getElementById('show');
+            const getBtn = document.getElementById('btn');
+            getBtn.addEventListener('click', fetchData, false);
+            async function fetchData () {
+               const myHeader = new Headers();
+                     const myRequest = new Request('/customer', {
+                        method: 'GET',
+                        headers: myHeader,
+                        mode: 'cors',
+                        cache: 'default',
+                     });
+
+                   await  fetch(myRequest).then((res) => res.json()).
+                        // then((text) => {
+                        //      for(let i=0; i<50; i++) {
+                        //         (show.innerHTML += text[i].LastName + " " + text[i].FirstName + '<br/>')}})
+                           
+                        then((text) =>show.innerHTML += text.LastName + " " + text.FirstName + '<br/>')
+                     // txtCon.innerHTML = response.text();
+                     // console.log(res); 
+                }
+         </script>
+          
+   </body>
+</html>

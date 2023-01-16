@@ -1,0 +1,40 @@
+
+<table class="table table-stripped table-hover">
+   
+     <thead class="table thead">
+        <tr class="table thead">
+            <th class="table thead th">Product</th>
+            <th>Unit Price</th>
+            <th>Added Quantity</th>
+            <th>Total Price</th>
+        </tr> 
+     </thead>
+    <tbody id="prod">
+    </tbody>
+    <tfoot class="rowTop">
+        <th>Grand Total</th>
+        <td></td>
+        <td>All Qty</td>
+        <td>Total Amount</td>
+    </tfoot>    
+</table>
+
+<script>
+    let prod = document.getElementById('prod');
+    let ourProds = ['Network_Switch', 'cctv_cam', 'Router', 'PC_Desk', 'hp_laserjet', 'Kyocera', 'iMac', 'Mac_Book', 'DVR', 'Xiaomi', 'Network_Cable', 'iphoneX3']
+    let prodInCart = [];
+    for (let i=0; i<100; i++) {
+        let produ = JSON.parse(localStorage.getItem(ourProds[i]));
+        if(produ !== null) {
+            prodInCart.push(produ);
+        }
+    }
+    console.log(prodInCart);
+    prod.innerHTML = prodInCart.map((item) => `<tr class="rowTop">` +
+        `<td >${item.ProdName}</td>` +
+        `<td>${item.UnitPrice}</td>` +
+        `<td>${item.Qty}</td>` +
+        `<td>${item.totPri}</td>` +
+    `</tr>` );
+</script>
+
