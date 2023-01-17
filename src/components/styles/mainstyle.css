@@ -1,0 +1,835 @@
+@charset 'UTF-8';
+
+/*Nav Bar Style Here*/
+
+
+.center-list {
+    text-align: center;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    /* position: relative; */
+}
+#navBar {
+    background-color: chartreuse;
+    width: 100%;
+    height: 60px;
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+}
+
+#headcon ul a:hover {
+    text-decoration: none;
+    text-transform: none;
+    background-color: white;
+}
+h1 {
+    color:royalblue;
+}
+#Gif {
+    height: 550px;
+    width: 100%;
+}
+#mainFooter {
+    position: absolute;
+    width: 100%;
+    background-color: chartreuse;
+    height: 10%;
+    text-align: center;
+    margin-top: 90%;
+    margin-bottom: 0%;
+}
+
+.headcon {
+    width: 60%;
+    padding-right: 40px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+    text-decoration: none;
+    text-transform: none;
+}
+
+#headcon a:hover {
+    background-color: white;
+    text-decoration: none;
+    text-transform: none;
+}
+
+#menulist {
+    text-align: center;
+    padding: 0.5em;
+}
+.row-fluid {
+    text-align: center;
+}
+.myBody {
+    background-color: whitesmoke;
+}
+#iconImg {
+   width: 10%;
+   display: flex;
+   margin-right: 5px;
+}
+.img {
+   margin-top: 0px;
+   width: inherit;
+}
+input {
+    border-radius: 10px;
+}
+#formBox {
+    border: 5px chartreuse solid;
+    height: 300px;
+    width: 300px;
+    border-radius: 20px;
+    position: absolute;
+    padding-top: 50px;
+    margin-top: 30%;
+    margin-left: 500px;
+}
+
+#formBox a:hover {
+    text-decoration: none;
+    color: orange;
+}
+
+#resetSubmit:hover {
+    background-color: chartreuse;
+}
+
+#myReg a:hover {
+    text-decoration: none;
+    color: orange;
+}
+
+#Service1:hover {
+    background-color: yellow;
+    color: yellow;
+}
+
+#cart {
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    border: 2px solid red;
+    text-align: center;
+    margin-top: 10px;
+}
+
+button:hover {
+background-color: chartreuse;
+}
+input:hover {
+    border: 5px chartreuse solid;
+}
+input {
+    border: 2.5px chartreuse solid;
+}
+
+/*Registration Button Style Here*/
+#myReg {
+    border: 5px chartreuse solid;
+    height: 500px;
+    width: 300px;
+    border-radius: 20px;
+    position: absolute;
+    padding-top: 50px;
+    margin-top: 20%;
+    margin-left: 500px;
+    box-shadow: 10px gray;
+}
+
+/*Login Button Style here*/
+
+#logBtn a {
+    color: black;
+    text-decoration: none;
+    text-transform: none;
+}
+input:focus {
+    border: 5px yellow solid;
+}
+.center-list a:hover {
+    text-transform: none;
+    text-decoration: none;
+    background-color: white;
+    color: green;
+    border-radius: 0.3px;
+}
+
+/*User Icon Styling here*/
+
+#uIcon {
+    height: 25px;
+    width: 25px;
+    border-radius: (25/2)px;
+    margin-left: 90%;
+}
+#uIcon:hover {
+    background-color: white;
+    border-radius: 50px;
+}
+
+.ServiceContainer {
+    height: 800px;
+    width: 100%;
+    /* border: 3px solid chartreuse;
+    background-color: chocolate; */
+    margin-top: 0.1px;
+    position: absolute;
+    display: flex;
+    /* box-sizing: border-box; */
+}
+.uppercontainer {
+    height: 48%;
+    width: 96%;
+    padding: 0.5em;
+    position: absolute;
+    display: flex;
+    /* box-sizing: border-box; */
+}
+
+.lowercontainer {
+    height: 48%;
+    width: 96%;
+    padding-top: 405px;
+    position: absolute;
+    display: flex;
+    margin-left: 7px;
+    /* box-sizing: border-box; */
+}
+
+
+.Service1 {
+    height: 96%;
+    width: 22.5%;
+    background-color:transparent;
+    /* border: 2px solid chartreuse; */
+    margin-left: 2.5%;
+    position: absolute;
+    /* display: inline-block; */
+    /* box-sizing: border-box; */
+}
+.Service2{
+    height: 96%;
+    width: 22.5%;
+    background-color:transparent;
+    /* border: 2px solid chartreuse; */
+    margin-left: 27.5%;
+    position: absolute;
+    /* display: inline-block; */
+    /* box-sizing: border-box; */
+}
+
+.Service3{
+    height: 96%;
+    width: 22.5%;
+    background-color:transparent;
+    /* border: 2px solid chartreuse; */
+    margin-left: 52.5%;
+    position: absolute;
+    /* display: inline-block; */
+    /* box-sizing: border-box; */
+}
+
+.Service4{
+    height: 96%;
+    width: 22.5%;
+    background-color:transparent;
+    /* border: 2px solid chartreuse; */
+    margin-left: 77.5%;
+    position: absolute;
+    /* display: inline-block; */
+    /* box-sizing: border-box; */
+}
+
+.Service5{
+    height: 96%;
+    width: 22.5%;
+    background-color:transparent;
+    /* border: 2px solid chartreuse; */
+    margin-left: 2.5%;
+    position: absolute;
+}
+
+.Service6{
+    height: 96%;
+    width: 22.5%;
+    background-color:transparent;
+    /* border: 2px solid chartreuse; */
+    margin-left: 27.5%;
+    position: absolute;
+}
+
+.Service7{
+    height: 96%;
+    width: 22.5%;
+    background-color:transparent;
+    /* border: 2px solid chartreuse; */
+    margin-left: 52.5%;
+    position: absolute;
+}
+
+.Service8{
+    height: 96%;
+    width: 22.5%;
+    background-color:transparent;
+    /* border: 2px solid chartreuse; */
+    margin-left: 77.5%;
+    position: absolute;
+}
+
+
+/*Chat Box Styling is Below*/
+
+.chatBox {
+    height: 40%;
+    width: 25%;
+    background-color: transparent;
+    border: 5px solid chartreuse;
+    position: absolute;
+    margin-left: 73.5%;
+    border-radius: 25px;
+    margin-top: 57%;
+    display: flexbox;
+}
+
+#msgVal {
+    /* border: 3px solid red; */
+    height: 250px;
+    margin-top: 50px;
+    width: 280px;
+    margin-left: 3px;
+    padding-left: 20px;
+}
+
+#xChat {
+    margin-top: 10px;
+    margin-right: 15px;
+}
+
+#RegChatBox {
+    height: 40%;
+    width: 25%;
+    background-color: transparent;
+    border: 5px solid chartreuse;
+    position: absolute;
+    margin-left: 73.5%;
+    border-radius: 25px;
+    margin-top: 45%;   
+}
+
+#LogChatBox {
+    height: 40%;
+    width: 25%;
+    background-color: transparent;
+    border: 5px solid chartreuse;
+    position: absolute;
+    margin-left: 73.5%;
+    border-radius: 25px;
+    margin-top: 53.5%;   
+}
+#revChat {
+    background-color: transparent;
+    border: 2.5px solid chartreuse;
+    border-radius: 50%;
+    height: 40px;
+    width: 80px;
+    margin-top: 1090px;
+    position: absolute;
+    margin-left: 92.5%;
+}
+
+#revChat:hover {
+    background-color: chartreuse;
+    color: white;
+}
+#revChatLog {
+     background-color: transparent;
+     border: 2.5px solid chartreuse;
+    border-radius: 50%;
+    height: 40px;
+    width: 80px;
+    margin-top: 85%;
+    position: absolute;
+    margin-left: 92.5%;
+}
+#revChatReg {
+    background-color: transparent;
+    border: 2.5px solid chartreuse;
+    border-radius: 50%;
+    height: 40px;
+    width: 80px;
+    margin-top: 75%;
+    position: absolute;
+    margin-left: 92.5%;
+}
+#showChat {
+    padding-top: 6px;
+    color: chartreuse;
+    font-size: 12px;
+    text-align: center;
+}
+
+#showChat:hover {
+    color: white;
+}
+#shLogCh {
+    padding-top: 6px;
+    color: chartreuse;
+    font-size: 12px;
+    text-align: center;
+}
+#shRegCh {
+    padding-top: 6px;
+    color:chartreuse;
+    font-size: 12px;
+    text-align: center;
+}
+#logo {
+    height: 40px;
+    width: 150px;
+    padding-bottom: 10px;
+    padding-top: 0px;
+}
+.logo {
+    width: 20%;
+    display: inline-block;
+}
+
+#chInput {
+    margin-left: 5px;
+    margin-top: 10px;
+    position: absolute;
+    width: 80%;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+#msg {
+    margin-left: 5px;
+    width: 260px;
+}
+
+#send {
+    margin-left: 25px;
+    color: chartreuse;
+}
+
+#send:hover {
+    background-color: chartreuse;
+    border: transparent;
+    color: white;
+}
+
+#send:focus {
+    border: transparent;
+    background-color: chartreuse;
+    color: white;
+}
+
+#logAlert {
+   position: absolute;
+    width: 30%;
+    height: 8%;
+    margin-top: 20%;
+    padding-top: 20px;
+    margin-left: 36.5%;
+    padding-left: 35px;
+    display: none;
+}
+#regAlert {
+    position: absolute;
+     width: 25%;
+     height: 8%;
+     margin-top: 12%;
+     padding-top: 20px;
+     margin-left: 38.5%;
+     padding-left: 60px;
+     display: none;
+ }
+
+ #invalEm {
+    position: absolute;
+     width: 25%;
+     height: 8%;
+     margin-top: 12%;
+     padding-top: 20px;
+     margin-left: 38.5%;
+     padding-left: 40px;
+     display: none;
+ }
+
+ #pwMismatch {
+    position: absolute;
+     width: 25%;
+     height: 8%;
+     margin-top: 12%;
+     padding-top: 20px;
+     margin-left: 38.5%;
+     padding-left: 30px;
+     display: none;
+ }
+ #mailValid {
+    position: absolute;
+    width: 30%;
+    height: 8%;
+    margin-top: 12%;
+    padding-top: 20px;
+    margin-left: 36.5%;
+    padding-left: 47.5px;
+    display: none;
+ }
+ #footerReg {
+    position: absolute;
+    width: 100%;
+    background-color: chartreuse;
+    height: 10%;
+    text-align: center;
+    margin-top: 80%;
+ }
+ #footerLog {
+    position: absolute;
+    width: 100%;
+    background-color: chartreuse;
+    height: 10%;
+    text-align: center;
+    margin-top: 90%;
+ }
+
+ #SocialMedia {
+     position: fixed;
+     margin-left: 12px;
+     margin-top: 5%;
+     background-color: transparent;
+     /* border: 2.5px solid chartreuse; */
+     height: 30%;
+     width: 5%;
+     border-radius: 10px;
+     box-shadow: darkgray 20px;
+ }
+
+ #facebook {
+    position: absolute;
+    padding-top: 0px;
+    height: 20%;
+    width: 40%;
+ }
+
+ #Whatsapp {
+    position: absolute;
+    padding-top: 60px;
+    height: 20%;
+    width: 40%;
+ }
+
+ #Instagram {
+    position: absolute;
+    padding-top: 120px;
+    height: 20%;
+    width: 40%;
+ }
+
+ #twitter {
+    position: absolute;
+    padding-top: 170px;
+    height: 20%;
+    width: 40%;
+ }
+
+ #youtube {
+    position: absolute;
+    padding-top: 220px;
+    height: 20%;
+    width: 40%;
+ }
+
+
+
+ #fbIcon {
+     height: 45px;
+     width: 45px;
+     padding-top: 0px;
+     padding-left: 3px;
+ }
+ #WaApIcon {
+    height: 45px;
+    width: 45px;
+    padding-top: 0px;
+    padding-left: 3px;
+}
+
+#InstIcon {
+    height: 35px;
+    width: 40px;
+    padding-top: 0px;
+    padding-left: 5px;
+}
+
+#twitIcon {
+    height: 35px;
+    width: 40px;
+    padding-top: 0px;
+    padding-left: 5px;
+}
+
+#yutuIcon {
+    height: 35px;
+    width: 40px;
+    padding-top: 0px;
+    padding-left: 5px;
+}
+
+@media screen and (max-width: 800px) {
+    #Gif {
+        height: 350px;
+    }
+    #mainFooter {
+        background-color:chartreuse;
+    }
+    #headcon {
+        display: inline-flex;
+        justify-content: space-around;
+        font-size: 0.75em;
+        align-items: flex-end;
+    }
+    #navBar {
+        display: flex;
+        justify-content: space-between;
+    }
+    .ServiceContainer {
+        height: 600px;
+        display: flex;
+        justify-content: space-between;
+        /* border: 5px solid red; */
+        position: absolute;
+    }
+    .uppercontainer {
+        display: flex;
+        justify-content: space-between;
+        /* border: 5px solid red; */
+    }
+    .lowercontainer {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 300px;
+        /* border: 5px solid red; */
+    }
+    #SocialMedia {
+        margin-top: 80px;
+        position: fixed;
+    }
+    .chatBox {
+        height: 300px;
+        width: 300px;
+        background-color: transparent;
+        border: 5px solid chartreuse;
+        position: absolute;
+        margin-left: 435px;
+        border-radius: 25px;
+        margin-top: 300px;
+    }
+    #chInput {
+        margin-left: 5px;
+        margin-top: 25px;
+        position: absolute;
+        width: 280px;
+    }
+    #revChat {
+        background-color: transparent;
+        border: 2.5px solid chartreuse;
+        border-radius: 50%;
+        height: 40px;
+        width: 80px;
+        margin-top: 80%;
+        position: absolute;
+        margin-left: 85.5%;
+    }
+    .Service1 {
+        height: 96%;
+        width: 22.5%;
+        background-color:transparent;
+        /* border: 2px solid chartreuse; */
+        margin-left: 2.5%;
+        position: absolute;
+        /* display: inline-block; */
+        /* box-sizing: border-box; */
+    }
+    .Service2{
+        height: 96%;
+        width: 22.5%;
+        background-color:transparent;
+        /* border: 2px solid chartreuse; */
+        margin-left: 27.5%;
+        position: absolute;
+        /* display: inline-block; */
+        /* box-sizing: border-box; */
+    }
+    
+    .Service3{
+        height: 96%;
+        width: 22.5%;
+        background-color:transparent;
+        /* border: 2px solid chartreuse; */
+        margin-left: 52.5%;
+        position: absolute;
+        /* display: inline-block; */
+        /* box-sizing: border-box; */
+    }
+    
+    .Service4{
+        height: 96%;
+        width: 22.5%;
+        background-color:transparent;
+        /* border: 2px solid chartreuse; */
+        margin-left: 77.5%;
+        position: absolute;
+        /* display: inline-block; */
+        /* box-sizing: border-box; */
+    }
+    
+    .Service5{
+        height: 96%;
+        width: 22.5%;
+        background-color:transparent;
+        /* border: 2px solid chartreuse; */
+        margin-left: 2.5%;
+        position: absolute;
+    }
+    
+    .Service6{
+        height: 96%;
+        width: 22.5%;
+        background-color:transparent;
+        /* border: 2px solid chartreuse; */
+        margin-left: 27.5%;
+        position: absolute;
+    }
+    
+    .Service7{
+        height: 96%;
+        width: 22.5%;
+        background-color:transparent;
+        /* border: 2px solid chartreuse; */
+        margin-left: 52.5%;
+        position: absolute;
+    }
+    
+    .Service8{
+        height: 96%;
+        width: 22.5%;
+        background-color:transparent;
+        /* border: 2px solid chartreuse; */
+        margin-left: 77.5%;
+        position: absolute;
+    }
+    #myReg {
+        border: 5px chartreuse solid;
+        height: 425px;
+        width: 300px;
+        border-radius: 20px;
+        position: absolute;
+        padding-top: 40px;
+        margin-top: 250px;
+        margin-left: 235px;
+        box-shadow: 10px gray;
+    }
+    
+    #mailValid, #pwMismatch, #regAlert {
+        position: absolute;
+         width: 410px;
+         height: 70px;
+         margin-top: 50px;
+         padding-top: 20px;
+         margin-left: 205px;
+         padding-left: 60px;
+         display: none;
+         text-align: center;
+     }
+     #footerReg {
+        position: sticky;
+        width: 100%;
+        background-color: chartreuse;
+        height: 120px;
+        text-align: center;
+        margin-top: 1200px;
+     }
+     #RegChatBox {
+        height: 300px;
+        width: 300px;
+        margin-left: 450px;
+        margin-top: 810px;   
+    }
+    #revChatReg {
+      
+        margin-top: 1150px;
+        margin-left: 670px;
+    }
+    #formBox {
+        padding-top: 50px;
+        margin-top: 30%;
+        margin-left: 250px;
+    }
+    #footerLog {
+        position: sticky;  
+        height: 100px;
+        text-align: center;
+        margin-top: 1150px;
+     }
+     #LogChatBox {
+        height: 300px;
+        width: 300px;
+        margin-left: 450px;
+        margin-top: 750px;   
+    }
+  
+    #revChatLog {
+        
+        margin-top: 1080px;
+        margin-left: 670px;
+    } 
+    #logAlert {
+        position: absolute;
+         width: 410px;
+         height: 70px;
+         margin-top: 120px;
+         padding-top: 20px;
+         margin-left: 205px;
+         padding-left: 60px;
+         display: none;
+         text-align: center;
+     }
+}
+
+@media screen and (max-width: 480px) {
+    #Gif {
+        height: 150px;
+    }
+    #mainFooter {
+        background-color: chartreuse;
+    }
+    .ServiceContainer {
+        height: 300px;
+        width: 100%;
+     /* border: 3px solid chartreuse; */
+      
+    }
+    .uppercontainer {
+        height: 130px;
+        justify-content: space-between;
+        /* border: 5px solid red; */
+    }
+    .lowercontainer {
+        height: 130px;
+        justify-content: space-between;
+        padding-top: 150px;
+        /* border: 5px solid red; */
+    }
+    #headcon {
+        display: hide;
+    }
+}

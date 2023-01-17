@@ -1,0 +1,15 @@
+@charset 'UTF-8';
+
+.footer {
+    text-align: center;
+    background-color: chartreuse;
+    font-size: 1em;
+    width: 100%;
+    position: absolute;
+    margin-top: 2500px;
+    color: royalblue;
+}
+
+.footerFirst {
+    font-size: 1.5em;
+}

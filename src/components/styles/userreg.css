@@ -1,0 +1,46 @@
+@charset 'UTF-8';
+
+.userreg {
+    margin-top: 300px;
+    position: absolute;
+    margin-left: 40%;
+    text-align: center;
+    border: 5px solid chartreuse;
+    width: 300px;
+    height: 520px;
+    border-radius: 20px;
+    padding-top: 45px;
+}
+
+.userreg input {
+    border: 3px solid chartreuse;
+    border-radius: 8px;
+    height: 35px;
+}
+
+.userreg input:hover {
+   border: 5px solid yellow;
+}
+
+.userreg input:focus {
+    border: 3px solid violet;
+}
+
+#regBtn:hover {
+   background-color: chartreuse;
+}
+
+#regleg {
+    color: royalblue;
+}
+
+.userreg a:hover {
+    text-decoration: none;
+    color: chartreuse;
+    font: bold;
+    font-size: 1.2em;
+}
+
+/* #apiMess {
+    display: none;
+} */

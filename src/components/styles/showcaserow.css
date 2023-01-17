@@ -1,0 +1,85 @@
+@charset 'UTF-8';
+
+.showcaserow {
+    margin-top: 590px;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.paneladj {
+    width: 25%;
+    margin-top: 30px;
+}
+
+.row1 {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-grow: inherit;
+    width: 100%;
+    justify-content: space-around;
+    flex-direction: row;
+    padding: 10px;
+}
+.thumb1 {
+    position: relative;
+    width: 96%;
+    height: 350px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.thumbnl img {
+    position: relative;
+    height: 80%;
+    width: 98%;
+    background-color: silver;
+    border-radius: 8px;
+}
+
+.thumbnl {
+    position: relative;
+    width: 98%;
+}
+
+.cartPanel {
+    position: relative;
+    width: 98%;
+    height: 20%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    padding: 3%;
+}
+
+.cartPanel input {
+    width: 30%;
+    font-size: 0.7em;
+}
+
+.cartbtn {
+    width: 20%;
+    height: 85%;
+    font-size: 1em;
+    text-align: center;
+}
+
+.cartsum {
+    margin-left: 0%;
+}
+
+.panel {
+    /* border: 3px solid red; */
+    height: 30px;
+    display: flex;
+    position: relative;
+    margin-top: 0.5px;
+    flex-direction: row;
+    justify-content: space-between;
+    color: purple;
+}

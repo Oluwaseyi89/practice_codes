@@ -1,0 +1,13 @@
+@charset 'UTF-8';
+
+.thumb1 {
+    margin-top: 590px;
+    position: absolute;
+    flex-wrap: wrap;
+    width: 24%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 4px;
+}
