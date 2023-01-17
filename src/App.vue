@@ -1,39 +1,35 @@
 <template>
   <div class="container">
-    <HeaderView :tasks="this.tasks" title="Task Tracker"/>
-    <p>{{ this.tasks.day }}</p>
+    <HeaderView @toggle-add-task="toggleAddTask" :showAddTask="showAddTask" title="Task Tracker"/>
+    
+    <router-view :showAddTask="showAddTask"></router-view>
+    <FooterView />
   </div>
 </template>
 
 <script>
 
 import HeaderView from './components/HeaderView'
+import FooterView from './components/FooterView'
 
 export default {
   name: 'App',
   components: {
-    HeaderView    
+    HeaderView,
+    FooterView    
   },
 
   data () {
     return {
-      tasks: []
+      showAddTask: false
     }
   },
 
-  created () {
-    this.tasks = [
-      {
-          "id": 1,
-          "day": "Monday",
-          "text": "Meeting with my Doctor"
-        },
-        {
-          "id": 2,
-          "day": "Tueday",
-          "text": "Shopping in the Grocery Store"
-        }
-    ]
+  methods: {
+
+    toggleAddTask () {     
+      this.showAddTask = !this.showAddTask;
+    }
   }
 }
 </script>

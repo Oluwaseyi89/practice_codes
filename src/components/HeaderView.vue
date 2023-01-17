@@ -1,11 +1,8 @@
 <template>
     <header>
         <h1>{{ title }}</h1>
-        <ButtonView text="Add Task" color="green"/>
+        <ButtonView v-show="homePage" @toggle-add-task="$emit('toggle-add-task')" :text="showAddTask ? 'Close' : 'Add Task'" :color="showAddTask ? 'red' : 'green'"/>
     </header>
-    <div v-for="task in tasks" :key="task.id">
-        <h3>{{ task.day + " - " + task.text }}</h3>
-    </div>
 </template>
 
 <script>
@@ -14,10 +11,16 @@
         name: 'HeaderView',
         props: {
             title: String,
-            tasks: Array,
+            showAddTask: Boolean
         },
         components: {
             ButtonView,
+        },
+        computed: {
+            homePage () {
+                if(this.$route.path === '/') return true;
+                else return false;
+            }
         }
 
     }

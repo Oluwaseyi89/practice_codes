@@ -11,7 +11,7 @@
         },
         methods: {
             onClick() {
-                alert("Button Clicked")
+                this.$emit("toggle-add-task")
             }
         }
     }
@@ -24,6 +24,6 @@
         height: 40px;
         color: white;
         font-size: 1.1em;
-        border-color: green;
+        border-color: white;
     }
 </style>
