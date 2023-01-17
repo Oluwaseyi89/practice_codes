@@ -1,0 +1,45 @@
+{% extends 'dxlApp/base.html' %}
+    {% block content %}
+    <div style="margin-top: 20px; text-align: center;" id="wrong_pass" class="alert alert-danger alert-dismissible" role="alert">
+            <p id="log_mess">{{login_error}}</p>
+        <button role=alert class="close" data-dismiss="alert"><span>&times;</span></button>
+    </div>
+<form id="admin" action="/dxlApp/prod_update/" method="POST">
+{% csrf_token %}
+    <input id="adminPass" name="adminpass" type="password" placeholder="Enter Password"/>
+    <input class="adminSubmit" type="submit" value="Login"/>
+</form>
+<script>
+                let cart = document.getElementById('cart');
+                let tot = 0;
+                let ourProds = ['Network_Switch', 'cctv_cam', 'Router', 'PC_Desk', 'hp_laserjet', 'Kyocera', 'iMac', 'Mac_Book', 'DVR', 'Xiaomi', 'Network_Cable', 'iphoneX3']
+                let prodInCart = [];
+                for (let i=0; i<100; i++) {
+                    let produ = JSON.parse(localStorage.getItem(ourProds[i]));
+                    if(produ !== null) {
+                        prodInCart.push(produ);
+                    }
+                }
+
+                for (let j=0; j<prodInCart.length; j++) {
+                    tot += prodInCart[j].Qty;
+                }
+
+                cart.innerHTML = tot;                              
+    </script>
+
+    <style>
+        #admin {
+            margin-top: 100px;
+            margin-left: 500px;
+        }
+    </style>
+
+    <script>
+        if(!$("#log_mess").html()) {
+            $("#wrong_pass").hide();
+        } else {
+            $("#wrong_pass").show();
+        }
+    </script>
+{% endblock %}

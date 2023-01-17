@@ -1,0 +1,80 @@
+{% extends 'dxlApp/base.html' %}
+    {% block content %}
+<div class="container" id="prodContainer">
+    <div><h1>Product Update Table</h1></div>
+           <div class="alert alert-success">
+            <p>{{data}}</p>
+           </div> 
+    <div id="input_row">
+        <select id="prod_name" class="selectBtn">
+            <option>Select a product</option>
+            <option>Mac_Book</option>
+            <option>iMac</option>
+            <option>Kyocera</option>
+            <option>DVR</option>
+            <option>Router</option>
+            <option>Network_Cable</option>
+            <option>cctv_cam</option>
+            <option>PC_Desk</option>
+            <option>Network_Switch</option>
+            <option>hp_laserjet</option>
+            <option>iphoneX3</option>
+            <option>Xiaomi</option>
+        </select>
+        
+        <input id="prod_price" type="text" placeholder="Enter Price (NGN)" />
+        <input id="prod_qty"  type="text" placeholder="Qty in Stock" />
+        <input id="img_file" type="file" name="prod_img" placeholder="Upload Image"/>  
+        <div id="avatar"><img id="target_img" src="" alt=""></div>     
+    </div>
+    <div>
+        <input id="add_prod" class="adminSubmit" type="button" value="Add Product"/>
+        <input id="update_prod" class="adminSubmit" type="button" value="Update Product"/>
+         <input id="del_prod" class="adminSubmit" type="button" value="Delete Product"/>
+    </div>
+    <div id="prodTable">
+        
+    </div>
+</div>
+<style>
+    #prodContainer {
+        margin-left: 80px;
+        margin-top: 90px;
+    }
+    #input_row {
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        justify-self: end;
+    }
+
+    #input_row input {
+        height: 35px;
+    }
+
+    #avatar { 
+        /* border: solid red 2px; */
+        width: 100px; height: 100px;
+    }
+
+    #avatar img {
+        width: 100%;
+        height: 100%;
+    }
+
+    #target_img {
+        display: none;
+    }
+</style>
+
+<script>
+    $('#img_file').change(()=> {
+        let tmp_path = URL.createObjectURL(event.target.files[0]);
+        $("#target_img").fadeIn("slow").attr('src', tmp_path);
+        let full_path = $("#img_file").val();
+        let base_name = full_path.split('\\').pop().split('/').pop();
+        // let path_start = "http://localhost:5000/static/dxlApp/Product_Image/";
+        // $("#img_path").html(tmp_path + "<br/>" + path_start + base_name);
+    });
+</script>
+{% endblock %}

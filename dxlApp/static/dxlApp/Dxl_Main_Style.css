@@ -1,0 +1,534 @@
+@charset 'UTF-8';
+
+/*Nav Bar Style Here*/
+
+/* * {
+    padding: 0px;
+    margin: 0px;
+} */
+.center-list {
+    text-align: center;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#navBar {
+    background-color: chartreuse;
+    width: 100%;
+    height: 60px;
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+}
+
+#headcon ul a:hover {
+    text-decoration: none;
+    text-transform: none;
+    background-color: white;
+}
+h1 {
+    color:royalblue;
+}
+#Gif {
+    height: 550px;
+    width: 100%;
+}
+#mainFooter {
+    position: absolute;
+    width: 100%;
+    background-color: chartreuse;
+    height: 10%;
+    text-align: center;
+    margin-top: 90%;
+    margin-bottom: 0%;
+}
+
+#headcon {
+    width: 60%;
+    padding-right: 40px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+    text-decoration: none;
+    text-transform: none;
+}
+
+#headcon a:hover {
+    background-color: white;
+    text-decoration: none;
+    text-transform: none;
+}
+
+#menulist {
+    text-align: center;
+    padding: 0.5em;
+}
+.row-fluid {
+    text-align: center;
+}
+.myBody {
+    background-color: whitesmoke;
+}
+#iconImg {
+   width: 10%;
+   display: flex;
+   margin-right: 5px;
+}
+.img {
+   margin-top: 0px;
+   width: inherit;
+}
+input {
+    border-radius: 10px;
+}
+#formBox {
+    border: 5px chartreuse solid;
+    height: 300px;
+    width: 300px;
+    border-radius: 20px;
+    position: absolute;
+    padding-top: 50px;
+    margin-top: 30%;
+    margin-left: 500px;
+}
+
+#formBox a:hover {
+    text-decoration: none;
+    color: orange;
+}
+
+#resetSubmit:hover {
+    background-color: chartreuse;
+}
+
+#myReg a:hover {
+    text-decoration: none;
+    color: orange;
+}
+
+#Service1:hover {
+    background-color: yellow;
+    color: yellow;
+}
+
+#cart {
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    border: 2px solid red;
+    text-align: center;
+    margin-top: 10px;
+}
+
+button:hover {
+background-color: chartreuse;
+}
+input:hover {
+    border: 5px chartreuse solid;
+}
+input {
+    border: 2.5px chartreuse solid;
+}
+
+/*Registration Button Style Here*/
+#myReg {
+    border: 5px chartreuse solid;
+    height: 500px;
+    width: 600px;
+    border-radius: 20px;
+    position: absolute;
+    padding-top: 30px;
+    margin-top: 15%;
+    margin-left: 350px;
+    box-shadow: 10px gray;
+}
+
+#formSet {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/*Login Button Style here*/
+
+#logBtn a {
+    color: black;
+    text-decoration: none;
+    text-transform: none;
+}
+input:focus {
+    border: 5px yellow solid;
+}
+.center-list a:hover {
+    text-transform: none;
+    text-decoration: none;
+    background-color: white;
+    color: green;
+    border-radius: 0.3px;
+}
+
+/*User Icon Styling here*/
+
+#uIcon {
+    height: 25px;
+    width: 25px;
+    border-radius: (25/2)px;
+    margin-left: 90%;
+}
+#uIcon:hover {
+    background-color: white;
+    border-radius: 50px;
+}
+
+
+
+
+
+/*Chat Box Styling is Below*/
+
+.chatBox {
+    height: 360px;
+    position: absolute;
+    width: 25%;
+    background-color: transparent;
+    border: 5px solid chartreuse;
+    margin-left: 73.5%;
+    border-radius: 25px;
+    margin-top: 1500px;
+}
+
+#msgVal {
+    /* border: 3px solid red; */
+    height: 250px;
+    margin-top: 50px;
+    width: 280px;
+    margin-left: 3px;
+    padding-left: 20px;
+}
+
+#xChat {
+    margin-top: 10px;
+    margin-right: 15px;
+}
+
+
+
+
+#revChat {
+    background-color: transparent;
+    border: 2.5px solid chartreuse;
+    border-radius: 50%;
+    height: 40px;
+    width: 80px;
+    margin-top: 1900px;
+    position: absolute;
+    margin-left: 92.5%;
+}
+
+#revChat:hover {
+    background-color: chartreuse;
+    color: white;
+}
+
+#showChat {
+    padding-top: 6px;
+    color: chartreuse;
+    font-size: 12px;
+    text-align: center;
+}
+
+#showChat:hover {
+    color: white;
+}
+
+#logo {
+    height: 40px;
+    width: 150px;
+    padding-bottom: 10px;
+    padding-top: 0px;
+}
+.logo {
+    width: 20%;
+    display: inline-block;
+}
+
+#chInput {
+    margin-left: 5px;
+    margin-top: 10px;
+    position: absolute;
+    width: 80%;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+#msg {
+    margin-left: 5px;
+    width: 260px;
+}
+
+#send {
+    margin-left: 25px;
+    color: chartreuse;
+}
+
+#send:hover {
+    background-color: chartreuse;
+    border: transparent;
+    color: white;
+}
+
+#send:focus {
+    border: transparent;
+    background-color: chartreuse;
+    color: white;
+}
+
+#logAlert {
+   position: absolute;
+    width: 30%;
+    height: 80px;
+    margin-top: 20%;
+    padding-top: 20px;
+    margin-left: 36.5%;
+    padding-left: 35px;
+    display: none;
+}
+#regAlert {
+    position: absolute;
+     width: 25%;
+     height: 80px;
+     margin-top: 7%;
+     padding-top: 20px;
+     margin-left: 38.5%;
+     padding-left: 60px;
+     display: none;
+ }
+
+ #invalEm {
+    position: absolute;
+     width: 25%;
+     height: 80px;
+     margin-top: 7%;
+     padding-top: 20px;
+     margin-left: 38.5%;
+     padding-left: 40px;
+     display: none;
+ }
+
+ #pwMismatch {
+    position: absolute;
+     width: 25%;
+     height: 80px;
+     margin-top: 7%;
+     padding-top: 20px;
+     margin-left: 38.5%;
+     padding-left: 30px;
+     display: none;
+ }
+ #mailValid {
+    position: absolute;
+    width: 30%;
+    height: 80px;
+    margin-top: 7%;
+    padding-top: 20px;
+    margin-left: 36.5%;
+    padding-left: 47.5px;
+    display: none;
+ }
+
+
+ #SocialMedia {
+     position: fixed;
+     margin-left: 12px;
+     margin-top: 250px;
+     background-color: transparent;
+     /* border: 2.5px solid chartreuse; */
+     height: 30%;
+     width: 5%;
+     border-radius: 10px;
+     box-shadow: darkgray 20px;
+ }
+
+ #facebook {
+    position: absolute;
+    padding-top: 0px;
+    height: 20%;
+    width: 40%;
+ }
+
+ #Whatsapp {
+    position: absolute;
+    padding-top: 60px;
+    height: 20%;
+    width: 40%;
+ }
+
+ #Instagram {
+    position: absolute;
+    padding-top: 120px;
+    height: 20%;
+    width: 40%;
+ }
+
+ #twitter {
+    position: absolute;
+    padding-top: 170px;
+    height: 20%;
+    width: 40%;
+ }
+
+ #youtube {
+    position: absolute;
+    padding-top: 220px;
+    height: 20%;
+    width: 40%;
+ }
+
+
+
+ #fbIcon {
+     height: 45px;
+     width: 45px;
+     padding-top: 0px;
+     padding-left: 3px;
+ }
+ #WaApIcon {
+    height: 45px;
+    width: 45px;
+    padding-top: 0px;
+    padding-left: 3px;
+}
+
+#InstIcon {
+    height: 35px;
+    width: 40px;
+    padding-top: 0px;
+    padding-left: 5px;
+}
+
+#twitIcon {
+    height: 35px;
+    width: 40px;
+    padding-top: 0px;
+    padding-left: 5px;
+}
+
+#yutuIcon {
+    height: 35px;
+    width: 40px;
+    padding-top: 0px;
+    padding-left: 5px;
+}
+
+#admin {
+    border: 2px solid chartreuse;
+    border-radius: 5px;
+    height: 100px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    margin-left: 450px;
+}
+
+.adminSubmit {
+    margin-top: 8px;
+    border: none;
+    background-color: silver;
+}
+
+.adminSubmit:hover {
+    border: 2px solid chartreuse;
+    background-color: chartreuse;
+}
+
+.adminSubmit:focus {
+    border: none;
+}
+
+#prodContainer {
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    padding: 1.02em;
+    align-items: center;
+    position: absolute;
+}
+
+#prodTable {
+    border: 3px solid chartreuse;
+    border-radius: 20px;
+    height: 900px;
+    width: 90%;
+    position: relative;
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+#heading {
+    background-color: steelblue;
+    border-radius: 10px;
+}
+
+.rowTop {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-between;
+    width: 950px;
+    /* border: 2px solid purple; */
+    align-items: center;
+    padding-top: 10px;
+}
+
+td {
+    text-align: center;
+}
+
+#theTable {
+    margin-top: 15px;
+}
+
+.undeclist {
+    list-style: none;
+}
+
+/* ul:nth-child(even) {
+    background-color: gray;
+} */
+
+#rowBottom {
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#spaBottom {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    margin-left: -30px;
+}
+
+
+.selectBtn {
+    border: 2px solid chartreuse;
+    height: 33px;
+    border-radius: 10px;
+}
+.selectBtn option {
+    background-color: silver;
+    color: purple;
+}
+

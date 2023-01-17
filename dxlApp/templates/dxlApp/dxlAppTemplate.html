@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+       {%load static%}
+       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+       <link rel="stylesheet" href="{%static 'dxlApp/style.css' %}" />
+       <link rel="stylesheet" href="{% static 'dxlApp/bootstrap.min.css' %}" />
+       <script type="text/javascript" src="{% static 'dxlApp/jquery-3.6.0.js' %}"></script>
+       <!-- <script type="text/javascript" src="handlebars-v4.7.7.js"></script>      -->
+       <title>DE-EXTRALUCID TECH WORLD PLC</title>
+   </head> 
+    <!--The body section begins here-->
+        <body class="myBody">
+            
+            <!--This is the Navbar section-->  
+                <div id=navBar class="navbar">
+                    <div class="brand logo">
+                        <img id="logo" src="{% static 'dxlApp/Dxl Tech logo Transparent.png' %}"/>
+                    </div>
+                              <div id="headcon">
+                                    <div><a href="#">Home</a></div>
+                                    <div><a href="#">About</a></div>
+                                   <div><a href="#">Our Services</a></div>
+                                   <div><a href="#">Our Products</a></div>
+                                    <div> <a href="register/">Subscribe for Voucher</a></div>
+                                   <div> <a href="#">Careers</a> </div>                                                                        
+                              </div>
+                              <!-- <div id="cart">
+                                <script id="cartTemplate" type="text/x-handlebars-template">
+                                    <p>{{cartCount}}</p>
+                                 </script>
+                              </div> -->
+                                        <div id="iconImg">
+                                                    <a href="login/">
+                                                        <img id="uIcon" src="{% static 'dxlApp/User_Icon.png' %}" />
+                                                    </a>
+                                        </div>
+                </div>
+                <!--This is the GIF Advert-->
+                <div>
+                    <img id="Gif" src="{% static 'dxlApp/DXL GIF Image dummy for Web.jpg' %}">
+                </div>
+                <input type="button" id="Service1" value="Add to Cart">
+                <div class="ServiceContainer">
+                    <div class="uppercontainer">
+                        <div class="Service1">
+                            <!-- <p>
+                                <h1 style="padding-top: 180px;">This is the First Service Container</h1>
+                            </p> -->
+                            <img class="img-thumbnail"  style="height: 100%; width: 100%;"/>
+                        <!-- <input type="button" value="Add to Cart" id="Service1"> -->
+                        </div>
+                        <div class="Service2">
+                            <!-- <p>
+                                <h1 style="padding-top: 180px; text-align: center; color: white">This is the Second Service Container</h1>
+                            </p> -->
+                            <img class="img-thumbnail" style="height: 100%; width: 100%;"/>
+                            <button id="Service2">Add to Cart</button>
+                        </div>
+                        <div class="Service3">
+                            <!-- <p>
+                                <h1 style="padding-top: 180px; text-align: center; color: white">This is the Third Service Container</h1>
+                            </p> -->
+                            <img class="img-thumbnail" style="height: 100%; width: 100%;"/>
+                            <button type="button" id="Service3">Add to Cart</button>
+                        </div>
+                        <div class="Service4">
+                            <!-- <p>
+                                <h1 style="padding-top: 180px; text-align: center; color: white">This is the Fourth Service Container</h1>
+                            </p> -->
+                            <img class="img-thumbnail" style="height: 100%; width: 100%;"/>
+                        </div>
+                    </div>
+
+                    <div class="lowercontainer">
+                        <div class="Service5">
+                            <!-- <p>
+                                <h1 style="padding-top: 180px; text-align: center; color: white">This is the Fifth Service Container</h1>
+                            </p> -->
+                            <img class="img-thumbnail" style="height: 100%; width: 100%;"/>
+                        </div>
+                        <div class="Service6">
+                            <!-- <p>
+                                <h1 style="padding-top: 180px; text-align: center; color: white">This is the Sixth Service Container</h1>
+                            </p> -->
+                            <img class="img-thumbnail" style="height: 100%; width: 100%;"/>
+                        </div>
+                        <div class="Service7">
+                            <!-- <p>
+                                <h1 style="padding-top: 180px; text-align: center; color: white">This is the Seventh Service Container</h1>
+                            </p> -->
+                            <img class="img-thumbnail" style="height: 100%; width: 100%;"/>
+                        </div>
+                        <div class="Service8">
+                            <!-- <p>
+                                <h1 style="padding-top: 180px; text-align: center; color: white">This is the Eighth Service Container</h1>
+                            </p> -->
+                            <img class="img-thumbnail" style="height: 100%; width: 100%;"/>
+                        </div>
+                    </div>
+                   
+                    
+                </div>
+                <div class="clear-fix"></div>
+                <div id="SocialMedia">
+                    <div id="facebook">
+                           <a href="https://www.facebook.com"><img src="{% static 'dxlApp/Icons/Facebook_Icon.png' %}" id="fbIcon" /></a> 
+                    </div>
+                    <div id="Whatsapp">
+                            <a href="#"><img src="{% static 'dxlApp/Icons/WhatsApp_Icon.png' %}" id="WaApIcon" /></a>
+                    </div>
+                    <div id="Instagram">
+                            <a href="#"><img src="{% static 'dxlApp/Icons/Instagram_Icon.png' %}" id="InstIcon" /></a>
+                    </div>
+                    <div id="twitter">
+                            <a href="#"><img src="{% static 'dxlApp/Icons/Twitter_Icon.png' %}" id="twitIcon" /></a>
+                </div>
+                    <div id="youtube">
+                            <a href="#"><img src="{% static 'dxlApp/Icons/Youtube_Icon.png' %}" id="yutuIcon" /></a>
+                    </div>
+                </div>
+                <div style="margin-top: 2200px;"></div>
+
+                <!--Find the Chat Box Below-->
+                
+                    <div class="chatBox">
+                    <span class='close' id='xChat'>&times;</span>
+                    <div id="msgVal"></div>
+                    <div id="chInput">
+                        <input type="text" name="msg" id="msg" /> <input type="submit" action="/chat" method="POST" id="send" value="Send" />                       </div>  
+                    </div>
+                     <!--Chat Box Ends Here-->
+            
+            <div class="clear-fix"></div>
+            <div id='revChat'>
+                <p id="showChat">Show Chat</p>
+            </div>
+
+                 
+                 <div id="mainFooter">
+                     <footer> This is the Footer </footer>
+                 </div>
+                <script type="text/javascript" src="{% static 'dxlApp/Dxl_Main_Script.js' %}"></script>
+                <script type="text/javascript" src="{% static 'dxlApp/Dxl_jQuery.js' %}"></script>
+                <script type="text/javascript" src="{% static 'dxlApp/bootstrap.min.js' %}"></script>
+              
+
+                <!-- <script id="cartTemplate" type="text/x-handlebars-template">
+                   <p>{{cartCount}}</p>
+                </script> -->
+
+        </body> 
+</html>
