@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+       <link rel="stylesheet" href="../styles/bootstrap.min.css" />
+       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+       <link rel="stylesheet" href="../styles/header.css" />
+       <link rel="stylesheet" href="../styles/index.css" />
+       <script type="text/javascript" src="../scripts/jquery-3.6.0.js"></script>     
+       <title>About De-Extralucid Tech World</title>
+   </head> 
+    <!--The body section begins here-->
+        <body>
+            <!--This is the Navbar section-->  
+                <div class="header-div">
+                    <div class="logo">
+                        <img alt="logo" class="logo-img" src="../images/dxl-logo.png"/>
+                    </div>
+                    <div class="link-div">
+                        <ul class="header-link">
+                            <li><a href="../index.html">Home</a></li>
+                            <li><a href="./about.html">About</a></li>
+                            <li><a href="./services.html">Our Services</a></li>
+                            <li><a href="./products.html">Our Products</a></li>
+                            <li><a href="./careers.html">Careers</a></li>
+                        </ul>                               
+                    </div>
+                    <div class="sm-link-div" id="sm-link">
+                        <span class="close" id="close-sm-header">&times;</span>
+                        <ul class="header-link-sm">
+                            <li><a href="../index.html">Home</a></li>
+                            <li><a href="./about.html">About</a></li>
+                            <li><a href="./services.html">Our Services</a></li>
+                            <li><a href="./products.html">Our Products</a></li>
+                            <li><a href="./careers.html">Careers</a></li>
+                        </ul>    
+                    </div> 
+                    <div class="cart-div">
+                        <a href="#" style="text-decoration: none;">
+                          <div id="cart"></div>
+                          <div id="cart-img"><img alt="cart-img" height="90%" width="90%" src="../images/shopping-cart.png"/></div>
+                        </a>
+                    </div>                         
+                    <div class="user-icon">
+                        <img alt="user-icon" id="usr-ico" src="../images/user-avatar.png" />        
+                    </div>
+                </div>
+                <div id="usr-opt">
+                    <ul>
+                        <li><a href="./login.html">Login</a></li>
+                        <li><a href="./register.html">Sign-up</a></li>
+                    </ul>
+                </div>
+               
+                 
+                <footer class="page-footer">De-Extralucid Tech World &copy; 2023. All rights reserved.</footer>
+                 
+                
+                <script type="text/javascript" src="../scripts/header.js"></script>
+                <script type="text/javascript" src="../scripts/bootstrap.min.js"></script>
+        
+                <script>
+                    let cartTot = document.getElementById('cart');
+                    let tot = 0;
+                    for(let i = 0; i < 12; i++) {
+                        let newKey = localStorage.key(i);
+                        if(newKey != null) {
+                            newObj = JSON.parse(localStorage.getItem(newKey));
+                            tot += parseInt(newObj.Qty);
+                        }
+                    }               
+                    cartTot.innerHTML = tot;
+                </script>
+        </body> 
+</html>
