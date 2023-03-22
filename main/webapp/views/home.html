@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Seyi Blog</title>
+    </head>
+    <body>
+        <h3>Welcome to Seyi Blog</h3>
+        <p>This is from a model and view</p>
+
+        <img id="photo-id" alt="user-photo" height="100" width="100" />
+
+        <form style="display: flex; flex-direction:column; align-items:center; justify-content:center;">
+            <legend>Save a User</legend>
+            <input id="firstName" type="text" name="first_name" placeholder="First Name"/>
+            <input id="lastName" type="text" name="last_name" placeholder="Last Name"/>
+            <input id="phone" type="text" name="phone" placeholder="phone"/>
+            <input id="email" type="email" name="email" placeholder="email"/>
+            <input id="password" type="password" name="password" placeholder="password"/>
+            <input id="photo" type="file" name="photo"/>
+            <input id="form-btn" type="submit" value="Save"/>
+        </form>
+
+        <script>
+            let firstName = document.getElementById('firstName');
+            let lastName = document.getElementById('lastName');
+            let phone = document.getElementById('phone');
+            let email = document.getElementById('email');
+            let password = document.getElementById('password');
+            let photo = document.getElementById('photo');
+            let photo_img = document.getElementById('photo-id');
+            let photoBlob;
+
+            let basename;
+
+            
+            
+            let formBtn = document.getElementById('form-btn');
+
+            photo.addEventListener('change', (e) => {
+                let tmp_path = URL.createObjectURL(e.target.files[0]);
+                photo_img.src = tmp_path;
+                basename = photo.value.split('\\').pop().split('/').pop();
+                console.log(basename);
+                photoBlob = e.target.files[0];
+            });
+
+            formBtn.addEventListener('click', submitUser, false);
+
+            function submitUser(e) {
+                e.preventDefault();
+
+                let formData = new FormData();
+               
+                formData.append("firstName", firstName.value);
+                formData.append("lastName", lastName.value);
+                formData.append("photo", photoBlob, basename);
+                formData.append("phone", phone.value);
+                formData.append("email", email.value);
+                formData.append("password", password.value);
+
+                
+                fetch('http://localhost:8080/save_user', {
+                    method: 'POST',
+                    body: formData
+                }).then((res) => console.log(res))
+                .catch(err => console.log(err.message));
+            }
+        </script>
+    </body>
+</html>
