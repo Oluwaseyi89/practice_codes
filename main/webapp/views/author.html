@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="author.css"/>
+        <title>Author Login Page</title>
+    </head>
+    <body>
+        <div class="author-header">
+            
+        </div>
+
+        <div id="alert-success"> 
+            <span id="close-success">&times;</span>
+            <div id="success-text"></div>
+        </div>
+        <div id="alert-failure">
+            <span id="close-failure">&times;</span>
+            <div id="failure-text"></div>
+        </div>
+
+        <form>
+            <legend>Author Login</legend>
+            <div class="input-div">
+                <label>User Name</label>
+                <input type="text" id="user-name" name="userName" />
+            </div>
+            <br/>
+            <div class="input-div">
+                <label>Password</label>
+                <input type="password" id="password"  name="password" />
+            </div>
+            <br/>
+            <input type="submit" id="login-btn" value="Login"/>
+            <hr/>
+            <div>
+                Don't have an Author's Account? Register <a href="/author_reg_page">here</a>.
+            </div>
+        </form>     
+        
+
+        <script type="text/javascript" src="author.js"></script>
+    </body>
+</html>

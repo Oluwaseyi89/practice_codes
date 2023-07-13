@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="_csrf" content="${_csrf.token}"/>
+        <meta name="_csrf_header" content="_csrf.headerName"/>
+        <link rel="stylesheet" type="text/css" href="author_dashboard.css"/>
+        <style>
+
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: auto;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .author-header {
+                height: 120px;
+                width: 100%;
+                background-color: purple;
+                margin-top: -20px;
+                color: white;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .user-img {
+                height: 150px;
+                width: 150px;
+                border: 2px solid purple;
+                border-radius: 5px;
+                margin-top: 15px;
+                align-self: flex-start;
+                margin-left: 10px;
+            }
+
+            form {
+                margin-top: 15px;
+                color: purple;
+                font-weight: bold;
+            }
+
+            #logOutBtn {
+                background-color: white;
+                font-size: 1.3em;
+                border: solid white 3px;
+                color: purple;
+                border-radius: 3px;
+                align-self: flex-end;
+                cursor: pointer;
+                margin-right: 10px;
+                margin-top: -40px;
+            }
+
+            legend {
+                text-align: center;
+               color: purple;
+               font-size: 1.2em;
+               font-weight: bold;
+            }
+
+            #author-dash-title {
+                margin-top: 40px;
+            }
+
+            table {
+                width: 500px;
+            }
+
+
+            td {
+                display: flex;
+                flex-direction: column;
+            }
+
+            tr {
+                padding-top: 20px;
+                padding-bottom: 20px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            video {
+                display: none;
+            }
+
+            #poster-frame {
+                display: none;
+                align-self: flex-end;
+            }
+
+            table {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .align-left {
+                align-self: flex-start;
+            }
+
+            .align-right {
+                align-self: flex-end;
+            } 
+            
+            textarea {
+                width: 500px;
+                border: solid 2px purple;
+                border-radius: 5px;
+            }
+
+            input[type="submit"] {
+                width: 120px;
+                height: 30px;
+                border: solid 1px purple;
+                border-radius: 2px;
+                background-color: purple;
+                color: white;
+                font-size: 0.95em;
+                cursor: pointer;
+
+            }
+
+            input[type="text"] {
+                width: 200px;
+                height: 30px;
+                border: solid 2px purple;
+                border-radius: 5px;
+            }
+
+            select {
+                width: 150px;
+                height: 30px;
+                border: solid 2px purple;
+                border-radius: 5px;
+                color: purple;
+                font-size: 0.95em;
+            }
+
+            option {
+                background-color: purple;
+                color: white;
+            }
+
+#alert-success {
+    height: 80px;
+    width: 400px;
+    margin-top: 15px;
+    display: none;
+    border: solid green 2px;
+    background-color: lightgreen;
+    border-radius: 5px;
+}
+
+#alert-failure {
+    height: 80px;
+    width: 400px;
+    display: none;
+    margin-top: 15px;
+    border: solid red 2px;
+    background-color: lightcoral;
+    border-radius: 5px;
+}
+
+#close-success {
+    color: green;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+#close-failure {
+    color: red;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin-right: 8px;
+    cursor: pointer;    
+}
+
+#failure-text {
+    text-align: center;
+}
+
+#success-text {
+    text-align: center;
+}
+
+        </style>
+
+        <title>Author's Dashboard</title>
+    </head>
+    <body>
+        <div class="author-header">
+            <h3 id="author-dash-title"></h3>
+            <input id="logOutBtn" type="submit" value="Log Out"/>
+        </div>
+        <div class="user-img">
+            <img id="author-img" height="100%" width="100%" alt="author-img"/>
+        </div>
+
+        <hr/>
+
+        <div id="alert-success"> 
+            <span id="close-success">&times;</span>
+            <div id="success-text"></div>
+        </div>
+        <div id="alert-failure">
+            <span id="close-failure">&times;</span>
+            <div id="failure-text"></div>
+        </div>
+
+        <div id="news-form-div">
+            <form>
+                <legend>News Upload Form</legend>
+                <br/>
+                <table>
+                    <tr>
+                        <td class="align-left">
+                            <label>News Video</label>
+                            <input name="news_video" id="news-video" type="file"/>
+                        </td>
+                        <td class="align-right">
+                            <video height="120px" width="250px" id="video-frame" controls>This is the news video</video>
+                        </td>                       
+                    </tr>
+                    <tr>
+                        <td class="align-left">
+                            <label>News Poster</label>
+                            <input name="news_poster" id="news-poster" type="file"/>
+                        </td>
+                        <td class="align-right">
+                            <img height="120px" width="120px" src="" alt="news-poster" id="poster-frame">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="align-left">
+                            <label>News Category</label>
+                            <select name="news_category" id="news-category">
+                                <option>Select Category</option>
+                                <option>Politics</option>
+                                <option>Sports</option>
+                                <option>Celebrities</option>
+                                <option>Fashion</option>
+                            </select>
+                        </td>
+                        <td class="align-rignt">
+                            <label>News Title</label>
+                            <input type="text" id="news-title" name="news_title">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>News Content</label>
+                            <textarea name="news_content" id="news-content" cols="30" rows="10"></textarea>
+                        </td>
+                    </tr>
+                </table>
+                <input type="submit" id="newsSubmit" value="Post News"/>
+            </form>
+        </div>
+        
+
+        <script type="text/javascript">
+            let authorDetails = JSON.parse(localStorage.getItem("authorDetails")) || null;
+
+            if (authorDetails === null) window.location = "http://localhost:8080/";
+            
+            console.log(authorDetails);
+            let logOutBtn = document.getElementById("logOutBtn");
+
+            logOutBtn.addEventListener('click', () => {
+                localStorage.removeItem("authorDetails");
+                window.location = "http://localhost:8080";
+            });
+
+            let authorImg = document.getElementById("author-img");
+            let authorTitle = document.getElementById("author-dash-title");
+            authorImg.src = `http://localhost:8080/uploads/${authorDetails.author_pix.split(".")[0]}`;
+
+            authorTitle.innerHTML = authorDetails.author_name + " " + "Author Dashboard";
+
+            let newsVideo = document.getElementById("news-video");
+            let videoFrame = document.getElementById("video-frame");
+            let videoBaseName;
+            let videoBlob;
+
+            newsVideo.addEventListener('change', (e) => {
+                let tmp_path = URL.createObjectURL(e.target.files[0]);
+                videoFrame.style.display = "block";
+                videoFrame.src = tmp_path;
+                console.log(newsVideo);
+                videoBaseName = newsVideo.value.split('\\').pop().split('/').pop();
+                videoBlob = e.target.files[0];
+            });
+
+            let newsPoster = document.getElementById("news-poster");
+            let posterFrame = document.getElementById("poster-frame");
+            let posterBaseName;
+            let posterBlob;
+
+            let alertSuccess = document.getElementById("alert-success");
+            let alertFailure = document.getElementById("alert-failure");
+            let closeSuccess = document.getElementById("close-success");
+            let closeFailure = document.getElementById("close-failure");
+            let failureText = document.getElementById("failure-text");
+            let successText = document.getElementById("success-text");
+
+
+closeSuccess.addEventListener('click', () => {
+    alertSuccess.style.display = "none";
+});
+closeFailure.addEventListener('click', () => {
+    alertFailure.style.display = "none";
+});
+
+            newsPoster.addEventListener('change', (e) => {
+                let tmp_path = URL.createObjectURL(e.target.files[0]);
+                posterFrame.style.display = "block";
+                posterFrame.src = tmp_path;
+                console.log(newsPoster);
+                posterBaseName = newsPoster.value.split('\\').pop().split('/').pop();
+                posterBlob = e.target.files[0];
+            });
+
+            let newsSubmit = document.getElementById("newsSubmit");
+            let newsTitle = document.getElementById("news-title");
+            let newsContent = document.getElementById("news-content");
+            let category = document.getElementById("news-category");
+             newsSubmit.addEventListener('click', async (e) => {
+                e.preventDefault();
+
+                if(newsTitle.value == "" || newsContent.value == "" || newsVideo.value == "" || newsPoster.value == "") {
+                    alertFailure.style.display = "block";
+                    failureText.innerHTML = "One or more input fields are blank";
+                } else {
+
+                    let formData = new FormData();
+                    formData.append("category", category.value);
+                    formData.append("newsVideo", videoBlob, videoBaseName);
+                    formData.append("newsPoster", posterBlob, posterBaseName);
+                    formData.append("newsTitle", newsTitle.value);
+                    formData.append("newsContent", newsContent.value);
+                    formData.append("authorName", authorDetails.author_name);
+                    formData.append("datePosted", new Date().toISOString());
+                    formData.append("commentStatus", false);
+                    formData.append("isLiked", false);
+                    formData.append("isDisliked", false);
+                    formData.append("dateUpdated", "");
+    
+                    let saveOperation = await fetch('http://localhost:8080/save_news', {
+                        method: 'POST',
+                        body: formData
+                    }).finally(() => {
+                        alertSuccess.style.display = "block";
+                        successText.innerHTML = "Processing your request, please wait...";
+                    });
+            
+                    let serverResponse = await saveOperation.json();
+                    console.log(serverResponse);
+                    if(serverResponse.status == "success") {
+                        alertSuccess.style.display = "block";
+                        successText.innerHTML = serverResponse.message;
+                    } else if( serverResponse.status == "error") {
+                        alertFailure.style.display = "block";
+                        failureText.innerHTML = serverResponse.message;
+                    } else {
+                        alertFailure.style.display = "block";
+                        failureText.innerHTML = "Some error occured";
+                    }
+                    
+                }
+
+             });
+        </script>
+    </body>
+</html>

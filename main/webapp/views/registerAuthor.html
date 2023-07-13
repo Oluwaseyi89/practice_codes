@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="author.css"/>
+        <title>Author Registration Page</title>
+    </head>
+    <body>
+        <div class="author-header">
+                       
+        </div>
+
+        <div id="alert-success"> 
+            <span id="close-success">&times;</span>
+            <div id="success-text"></div>
+        </div>
+        <div id="alert-failure">
+            <span id="close-failure">&times;</span>
+            <div id="failure-text"></div>
+        </div>
+        <form>
+            <legend>Author Registration</legend>
+            <div class="author-pix-div">
+                <div class="pix-input-div">
+                    <label>Upload Photo</label>
+                    <input type="file" id="author-pix" name="author_pix"/>
+                </div>
+                <img alt="author-avatar" id="author-avatar" />
+            </div>
+            <br/>
+            <div class="input-div">
+                <label>Full Name</label>
+                <input type="text" id="author-name" name="author_name" />
+            </div>
+            <br/>
+            <div class="input-div">
+                <label>Display Name</label>
+                <input type="text" id="display-name" name="author_display_name" />
+            </div>
+            <br/>
+            <div class="input-div">
+                <label>Username</label>
+                <input type="text" id="username" name="user_name" />
+            </div>
+            <br/>
+            <div class="input-div">
+                <label>E-mail</label>
+                <input type="email" id="author-email" name="author_email" />
+            </div>
+            <br/>
+            <div class="input-div">
+                <label>Password</label>
+                <input type="password" id="password" name="password" />
+            </div>
+            <br/>
+            <div class="input-div">
+                <label>Confirm Password</label>
+                <input type="password" id="ret-password" name="retpassword" />
+            </div>
+            <br/>
+            <input type="submit" id="reg-btn" value="Register"/>
+            <hr/>
+            <div>
+                Already have an account? Login <a href="/">here</a>.
+            </div>
+        </form>     
+        
+
+        <script type="text/javascript" src="register_author.js"></script>
+    </body>
+</html>

@@ -1,0 +1,10 @@
+.author-header {
+    height: 120px;
+    width: 100%;
+    background-color: purple;
+    margin-top: -20px;
+}
+
+body {
+    background-color: gray;
+}

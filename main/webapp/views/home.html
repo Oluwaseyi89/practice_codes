@@ -9,6 +9,8 @@
 
         <img id="photo-id" alt="user-photo" height="100" width="100" />
 
+        <video id="video-id" height="200" width="300"></video>
+
         <form style="display: flex; flex-direction:column; align-items:center; justify-content:center;">
             <legend>Save a User</legend>
             <input id="firstName" type="text" name="first_name" placeholder="First Name"/>
@@ -17,6 +19,7 @@
             <input id="email" type="email" name="email" placeholder="email"/>
             <input id="password" type="password" name="password" placeholder="password"/>
             <input id="photo" type="file" name="photo"/>
+            <input id="video" type="file" name="video"/>
             <input id="form-btn" type="submit" value="Save"/>
         </form>
 
@@ -27,9 +30,13 @@
             let email = document.getElementById('email');
             let password = document.getElementById('password');
             let photo = document.getElementById('photo');
+            let video = document.getElementById('video');
             let photo_img = document.getElementById('photo-id');
+            let video_samp = document.getElementById('video-id');
             let photoBlob;
+            let videoBlob;
 
+            let videobasename;
             let basename;
 
             
@@ -44,6 +51,14 @@
                 photoBlob = e.target.files[0];
             });
 
+            video.addEventListener('change', (e) => {
+                let tmp_path = URL.createObjectURL(e.target.files[0]);
+                video_samp.src = tmp_path;
+                videobasename = video.value.split('\\').pop().split('/').pop();
+                console.log(videobasename);
+                videoBlob = e.target.files[0];
+            });
+
             formBtn.addEventListener('click', submitUser, false);
 
             function submitUser(e) {
@@ -54,6 +69,7 @@
                 formData.append("firstName", firstName.value);
                 formData.append("lastName", lastName.value);
                 formData.append("photo", photoBlob, basename);
+                formData.append("video", videoBlob, videobasename);
                 formData.append("phone", phone.value);
                 formData.append("email", email.value);
                 formData.append("password", password.value);

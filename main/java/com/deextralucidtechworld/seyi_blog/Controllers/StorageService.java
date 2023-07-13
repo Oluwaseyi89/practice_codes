@@ -9,10 +9,12 @@ import org.springframework.web.multipart.MultipartFile;
 
 @Component
 public interface StorageService {
-  
+
     public void init();
 
     public void save(MultipartFile file);
+
+    public void saveVideo(MultipartFile file);
 
     public Resource load(String filename);
 

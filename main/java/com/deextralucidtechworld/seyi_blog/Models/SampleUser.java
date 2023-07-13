@@ -22,6 +22,7 @@ public class SampleUser implements Serializable {
     String first_name;
     String last_name;
     String photo;
+    String video;
     String phone;
     String email;
     String password;
@@ -51,6 +52,14 @@ public class SampleUser implements Serializable {
 
     public void setPhoto(MultipartFile photo) {
         this.photo = photo.getOriginalFilename();
+    }
+
+    public String getVideo() {
+        return this.video;
+    }
+
+    public void setVideo(MultipartFile video) {
+        this.video = video.getOriginalFilename();
     }
 
     public String getPhone() {
