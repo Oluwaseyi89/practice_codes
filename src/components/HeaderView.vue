@@ -2,26 +2,27 @@
     <div class='header-div'>
       <a href="/">
         <div class='logo-div'>
-          <img alt='logo' src='../assets/seyi_blog_logo.png' height='50px' />
+          <img alt='logo' src="../assets/seyi_blog_logo.png" height="50" width="100" />
+          <!-- <img alt='logo' :src="'../assets/seyi_blog_logo.png'" height="100%" width="100%" /> -->
         </div>
       </a>
       <div class='menus'>
           <div class='large-menu'>
             <ul class='nav nav-tab'>
               <li><a href='/politics'>Politics</a></li>
-              <li><a href='/sport'>Sport</a></li>
+              <li><a href='/sports'>Sports</a></li>
               <li><a href='/celebrities'>Celebrities</a></li>
               <li><a href='/fashion'>Fashion</a></li>
             </ul>
           </div>
           <div class='small-menu'>
             <div id='navBtn' class='nav-btn' @click="toggleMenu()">
-              <img alt='nav-pill' src='nav.png' height='25px' />
+              <img alt='nav-pill' src='../assets/nav.png' height='35' />
             </div>
             <div v-show="this.showMenu" class='vertical-menu' id='verticalMenu'>
               <ul>
               <li><a href='/politics'>Politics</a></li>
-              <li><a href='/sport'>Sport</a></li>
+              <li><a href='/sports'>Sports</a></li>
               <li><a href='/celebrities'>Celebrities</a></li>
               <li><a href='/fashion'>Fashion</a></li>
               </ul>
@@ -32,11 +33,14 @@
 </template>
 
 <script>
+
+    import logo from "../assets/seyi_blog_logo.png";
     export default {
         name: 'HeaderView',
         data() {
             return {
-                showMenu: false
+                showMenu: false,
+                logo,
             }
         },
         methods: {
@@ -66,8 +70,11 @@
 
     .logo-div {
         margin-top: 10px;
-        padding-left: 10px;
-        max-width: 30px;
+        margin-left: 10px;
+        height: 50px;
+        min-width: 70px;
+        /* border: 2px solid red; */
+        /* max-width: 30px; */
     }
 
     .large-menu {
@@ -77,8 +84,8 @@
     .nav-btn {
         width: 100%;
         height: 100%;
-        margin-left: 340px;
-        margin-right: 10px;
+        margin-left: 240px;
+        margin-right: 20px;
         margin-top: 25px;
     }
 
@@ -87,9 +94,8 @@
         width: 150px;
         height: 150px;
         padding-top: 15px;
-        margin-left: 225px;
+        margin-left: 160px;
         margin-top: -35px;
-        z-index: 2;
     }
 
     .vertical-menu ul {
@@ -131,6 +137,8 @@
         margin-top: 10px;
         padding-left: 10px;
         max-width: 30px;
+        height: 50px;
+        width: 70px;
     }
 
     .vertical-menu {
@@ -143,7 +151,6 @@
 }
 
 @media screen and (min-width: 1024px) {
-
     .header-div {
         background: purple;
         margin-top: -20px;
@@ -193,6 +200,8 @@
         margin-top: 10px;
         padding-left: 10px;
         max-width: 30px;
+        height: 50px;
+        width: 70px;
     }
 
     .nav-btn {

@@ -1,9 +1,10 @@
 import { createRouter, createWebHistory } from "vue-router";
 import PoliticsView from '../views/PoliticsView';
-import SportView from '../views/SportView';
+import SportsView from '../views/SportsView';
 import CelebritiesView from '../views/CelebritiesView';
 import FashionView from '../views/FashionView';
 import HomeView from '../views/HomeView';
+import NewsDetailView from '../views/NewsDetailView';
 
 const routes = [
     {
@@ -17,9 +18,9 @@ const routes = [
         component: PoliticsView
     },
     {
-        path: '/sport',
-        name: 'Sport',
-        component: SportView
+        path: '/sports',
+        name: 'Sports',
+        component: SportsView
     },
     {
         path: '/celebrities',
@@ -30,6 +31,11 @@ const routes = [
         path: '/fashion',
         name: 'Fashion',
         component: FashionView
+    },
+    {
+        path: '/detail/:news_title',
+        name: 'NewsDetail',
+        component: NewsDetailView
     }
 ];
 

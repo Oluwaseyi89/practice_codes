@@ -3,10 +3,10 @@
         <div class="error-msg" v-show="showErrorMessage">
             Error fetching news, try refreshing your browser...
         </div>
-        <div id="loader-div" v-show="showNetworkError">
+        <div v-show="showNetworkError">
             <LoaderView/>
         </div>
-        <div class="highlight-div" v-for="article in this.politicsNews" :key="article.newsTitle">
+        <div class="highlight-div" v-for="article in this.sportsNews" :key="article.newsTitle">
             <div class="time-div">
                 <p class="news-time"><span style="font-size: 1.3em;">&raquo; </span>{{ getUITimeString(article.datePosted) }}</p>
             </div>
@@ -14,38 +14,37 @@
                 <div class="news-poster">
                     <img :alt="article.newsPoster" height="150" width="150" :src="article.newsPoster"/>    
                 </div>       
-                <a :href="this.getDetailUrl(article.newsTitle)" class="news-title"><h3 @click="saveClickedNews(article)"  >{{ article.newsTitle }}</h3></a>  
+                <a :href="getDetailUrl(article.newsTitle)" class="news-title"><h3 @click="saveClickedNews(article)"  >{{ article.newsTitle }}</h3></a>  
             </div>
         </div>
     </div>
 </template>
 
 <script>
-    import LoaderView from './LoaderView.vue'
+    import LoaderView from './LoaderView.vue';
     export default {
-        name: 'PoliticsView',
+        name: 'SportView',
         components: {
             LoaderView
         },
         props: {
             getUITimeString: Function,
-            saveClickedNews: Function
-        }, 
+            saveClickedNews: Function,
+        },
         data() {
             return {
-                politicsNews: [],
+                sportsNews: [],
                 showNetworkError: false,
-                showErrorMessage: false,
-                dataReady: false
+                showErrorMessage: false
             }
-        }, 
+        },
         methods: {
-            async getPoliticsNews() {
+            async getSportsNews () {
 
                 let data; 
                 
                 try{
-                    data = await fetch("http://localhost:8080/api/news_category/politics");
+                    data = await fetch("http://localhost:8080/api/news_category/sports");
                 } catch (err) {
                     console.log(err.message);
                     this.showNetworkError = true;
@@ -53,8 +52,7 @@
                         this.showNetworkError = false;
                         this.showErrorMessage = true;
                     }, 10000);
-                } 
-  
+                }
                 let myNews = await data.json();
                 console.log(myNews);
                 let modNews = await myNews.map((news) => {
@@ -74,29 +72,19 @@
                   return news;
                 });
                 console.log(modNews);
-                this.politicsNews = modNews.reverse();
+                this.sportsNews = modNews.reverse();
             },
+
             getDetailUrl (news_title) {
                 let detailUrl = `/detail/${news_title}`;
                 return detailUrl;
-            } 
+            },   
         },
         created () {
-            this.getPoliticsNews();
+            this.getSportsNews();
         }
     }
 </script>
 
 <style>
-    .error-msg {
-        display: flex; 
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-        font-size: 1.5em;
-        font-weight: bold;
-        color: red;
-        margin-top: 30%;
-    }
 </style>
